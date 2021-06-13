@@ -1,0 +1,8 @@
+# streamlit
+# plotly
+# river
+# seaborn
+# creme
+# altair
+# sklearn
+# matplotlib
