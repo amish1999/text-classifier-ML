@@ -39,25 +39,14 @@ for x,y in data:
     model = model.learn_one(x,y)
 
 
-#Storage in a database
-import sqlite3
-conn = sqlite3.connect('data.db')
-c = conn.cursor()
+// //
 
 
-# Create Fxn from SQL 
 
-def create_table():
-    c.execute('CREATE TABLE IF NOT EXISTS predictionTable(message TEXT,prediction TEXT, probability NUMBER,software_proba NUMBER,hardware_proba NUMBER, postdate DATE)')
 
-def add_data(message,prediction,probability,software_proba,hardware_proba,postdate):
-    c.execute('INSERT INTO predictionTable(message,prediction,probability,software_proba,hardware_proba,postdate) VALUES (?,?,?,?,?,?)',(message,prediction,probability,software_proba,hardware_proba,postdate))
-    conn.commit()
 
-def view_all_data():
-    c.execute("SELECT * FROM predictionTable")
-    data = c.fetchall()
-    return data
+
+
 
 
 
